@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+    <title>Panorama</title>
+    <link rel="stylesheet" href="./css/style.css"></style>
+     <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three/build/three.module.js",
+          "camera-controls": "https://cdn.jsdelivr.net/npm/camera-controls@2.7.3/+esm"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="desc-container" style="display:none">
+      <iframe src="https://www.youtube.com/embed/D7icsuamx5E"></iframe>
+      <div class="title">Living Room</div>
+      <div class="text">Place for living</div>
+    </div>
+    <script src="./js/three.js"></script>
+    <script src="./js/panolens.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
