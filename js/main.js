@@ -75,6 +75,20 @@ function setView({ distanceFromCenter, horizontalAngle, verticalAngle, zoomFacto
     cameraControls.zoomTo(zoomFactor, animated);  // Zoom in or out
 }
 
+// Handle navigation clicks
+document.querySelectorAll('#nav-list li').forEach(item => {
+    item.addEventListener('click', function () {
+        const panoramaId = this.getAttribute('data-panorama');
+        if (panoramaId == 1) {
+            viewer.setPanorama(panorama1);
+        } else if (panoramaId == 2) {
+            viewer.setPanorama(panorama2);
+        } else if (panoramaId == 3) {
+            viewer.setPanorama(panorama3);
+        }
+    });
+});
+
 // Custom zoom handling with mouse wheel
 imageContainer.addEventListener('wheel', function (event) {
     event.preventDefault();

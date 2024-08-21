@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
-    <title>Panorama</title>
-    <link rel="stylesheet" href="./css/style.css"></style>
-     <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three/build/three.module.js",
-          "camera-controls": "https://cdn.jsdelivr.net/npm/camera-controls@2.7.3/+esm"
-        }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+  <title>Panorama</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three/build/three.module.js",
+        "camera-controls": "https://cdn.jsdelivr.net/npm/camera-controls@2.7.3/+esm"
       }
-    </script>
-  </head>
-  <body>
-    <div id="container"></div>
-    <div id="desc-container" style="display:none">
-      <iframe src="https://www.youtube.com/embed/D7icsuamx5E"></iframe>
-      <div class="title">Living Room</div>
-      <div class="text">Place for living</div>
-    </div>
-    <script src="./js/three.js"></script>
-    <script src="./js/panolens.js"></script>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+    }
+  </script>
+</head>
+<body>
+  <div id="container"></div>
+
+  <!-- Fancy Navigation List -->
+  <div id="nav-list">
+    <ul>
+      <li data-panorama="1">
+        <img src="./images/living-room.png" alt="Living Room">
+        <div class="nav-text">
+          <h3>Living Room</h3>
+          <p>Explore the cozy living room.</p>
+        </div>
+      </li>
+      <li data-panorama="2">
+        <img src="./images/bedroom.png" alt="Bedroom">
+        <div class="nav-text">
+          <h3>Bedroom</h3>
+          <p>Relax in the comfortable bedroom.</p>
+        </div>
+      </li>
+      <li data-panorama="3">
+        <img src="./images/kitchen.png" alt="Kitchen">
+        <div class="nav-text">
+          <h3>Kitchen</h3>
+          <p>Discover the modern kitchen.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div id="desc-container" style="display:none">
+    <iframe src="https://www.youtube.com/embed/D7icsuamx5E"></iframe>
+    <div class="title">Living Room</div>
+    <div class="text">Place for living</div>
+  </div>
+  <script src="./js/three.js"></script>
+  <script src="./js/panolens.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
 </html>
